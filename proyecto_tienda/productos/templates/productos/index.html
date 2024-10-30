@@ -16,7 +16,7 @@
     </nav>
 
     <div class="container">
-    <table>
+        <table>
             <thead>
                 <tr>
                     <th>NOMBRE</th>
@@ -24,19 +24,24 @@
                     <th>CATEGORIA</th>
                 </tr>
             </thead>
-        <tbody>
-        {% for producto in productos %}
-            <tr> 
-                <td>{{producto.nombre}}</td>
-                <td>{{producto.precio}}</td>
-                <td>{{producto.categoria.nombre}}</td>
-            </tr> 
-        </tbody>
-    </table>
-        <!-- {% empty %}
-            <h4>No hay productos</h4>-->
-        {% endfor %} 
-    
+            <tbody>
+                {% for producto in productos %}
+                    <tr>
+                        <td>{{ producto.nombre }}</td>
+                        <td>{{ producto.precio }}</td>
+                        <td>{{ producto.categoria.nombre }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3">
+                            <h4>No hay productos</h4>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
     </div>
+    <script src="{% static 'js/scripts.js'%}"></script>
 </body>
 </html>

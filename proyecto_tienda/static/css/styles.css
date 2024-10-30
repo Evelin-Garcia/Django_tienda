@@ -44,7 +44,7 @@ table{
 }
 
 table, th, td{
-    border: 1px solid orangered;
+    border: 1px solid orangered; /*grosor, tipo linea y color del borde*/
 }
 
 th, td{
