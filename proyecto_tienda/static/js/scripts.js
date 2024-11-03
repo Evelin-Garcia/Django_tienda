@@ -10,4 +10,12 @@ document.addEventListener("DOMContentLoaded", function(){
             link.style.backgroundColor = "";
         });
     });
+    //para hacer efecto en boton de html
+    const showAlertButton = document.getElementById('show-alert');
+    if (showAlertButton){
+    showAlertButton.addEventListener("click", function(){
+        alert('Felicitaciones! Desbloqueaste un cupon de descuento!');
+        });
+    }
 });
+
