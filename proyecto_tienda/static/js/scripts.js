@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", function(){
     navlink.forEach(function(link){
         link.addEventListener("mouseover", function(){
             link.style.backgroundColor = "#ffe4c4";
+            link.style.borderRadius = "5px";
         });
         link.addEventListener("mouseout", function(){
             link.style.backgroundColor = "";
+            link.style.borderRadius = "";
         });
     });
     //para hacer efecto en boton de html
