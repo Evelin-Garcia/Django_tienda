@@ -7,8 +7,8 @@ from productos.models import Producto
 class Oferta(models.Model):
     producto=models.ForeignKey(Producto, on_delete=models.CASCADE)
     porcentaje_descuento=models.DecimalField(max_digits=5, decimal_places=2)
-    fecha_inicio=models.DateTimeField()
-    fecha_fin=models.DateTimeField()
+    fecha_inicio=models.DateTimeField(null=False, blank=False)
+    fecha_fin=models.DateTimeField(null=False, blank=False)
     
     #metodo especial para validaciones personalizadas en django (en este caso para fecha de inicio y porcentaje de descuento válidos)
     def clean(self): 
@@ -30,4 +30,5 @@ class Oferta(models.Model):
     @property
     def precio_oferta(self):
         return self.producto.precio*(1-(self.porcentaje_descuento/100))
+    
     

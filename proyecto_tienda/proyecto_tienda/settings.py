@@ -128,3 +128,7 @@ STATICFILES_DIRS=[BASE_DIR / 'static',]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Rutas para el login de inicio de sesión
+LOGIN_URL= '/accounts/login/'
+LOGIN_REDIRECT_URL='/ofertas/' #la página q deseo q vea el usuario cuando el logeo es exitoso
